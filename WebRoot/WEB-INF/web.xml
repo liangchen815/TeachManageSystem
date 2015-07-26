@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>TeachManageSystem</display-name>
+  <context-param>
+    <param-name>server</param-name>
+    <param-value> localhost </param-value>
+  </context-param>
+  <context-param>
+    <param-name>dbname</param-name>
+    <param-value> ustbteach </param-value>
+  </context-param>
+  <context-param>
+    <param-name>user</param-name>
+    <param-value> root </param-value>
+  </context-param>
+  <context-param>
+    <param-name>pwd</param-name>
+    <param-value>wuzhengliang</param-value>
+  </context-param>
+  <welcome-file-list>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>statusTest</display-name>
+    <servlet-name>statusTest</servlet-name>
+    <servlet-class>util.statusTest</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>sdf</servlet-name>
+    <servlet-class>finance.sdf</servlet-class>
+  </servlet>
+   
+  <servlet>
+    <servlet-name>ApplicationListServlet</servlet-name>
+    <servlet-class>finance.ApplicationListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SubmitExpenseAccountServlet</servlet-name>
+    <servlet-class>finance.SubmitExpenseAccountServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DetailApplicationServlet</servlet-name>
+    <servlet-class>finance.DetailApplicationServlet</servlet-class>
+  </servlet>
+    <servlet>
+    <servlet-name>DetailApplicationServlet1</servlet-name>
+    <servlet-class>finance.DetailApplicationServlet1</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LoadApplicationServlet</servlet-name>
+    <servlet-class>finance.LoadApplicationServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ModifyApplicationServlet</servlet-name>
+    <servlet-class>finance.ModifyApplicationServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Parttime</servlet-name>
+    <servlet-class>finance.ParttimeJobApplyServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>ApplicationListServlet</servlet-name>
+    <url-pattern>/finance/applicationList</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SubmitExpenseAccountServlet</servlet-name>
+    <url-pattern>/finance/submit</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DetailApplicationServlet</servlet-name>
+    <url-pattern>/finance/detail</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+    <servlet-name>DetailApplicationServlet1</servlet-name>
+    <url-pattern>/finance/detail0</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoadApplicationServlet</servlet-name>
+    <url-pattern>/finance/load</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ModifyApplicationServlet</servlet-name>
+    <url-pattern>/finance/modify</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Parttime</servlet-name>
+    <url-pattern>/finance/apply</url-pattern>
+  </servlet-mapping>
+ 
+
+  <servlet-mapping>
+    <servlet-name>statusTest</servlet-name>
+    <url-pattern>/statusTest</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>sdf</servlet-name>
+    <url-pattern>/servlet/sdf</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <filter-name>EncodeFileter</filter-name>
+    <filter-class> Fileter.EncodeFileter </filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>EncodeFileter</filter-name>
+    <url-pattern> /* </url-pattern>
+  </filter-mapping>
+</web-app>
